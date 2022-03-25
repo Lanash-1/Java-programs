@@ -24,7 +24,7 @@ public class DynamicPoly{
         Vehicle type;
         type = new Honda();
         type.make();
-        type = new Tata();
-        type.make();
+        Tata type2 = new Tata();
+        type2.make();
     }
 }
