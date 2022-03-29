@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-class UserDetails{
+class UserPlanDetails{
 	boolean isPlanActive;
 	int planCost;
 	int planValidity;
-	UserDetails(boolean isPlanActive, int planCost, int planValidity){
+	UserPlanDetails(boolean isPlanActive, int planCost, int planValidity){
 		this.isPlanActive = isPlanActive;
 		this.planCost = planCost;
 		this.planValidity = planValidity;
@@ -41,7 +41,6 @@ class Movie{
 	String language;
 	int releaseYear;
 }
-
 
 class Series extends Movie{
 	int totalNoOfEpisode;
@@ -86,18 +85,18 @@ public class Main {
 		shows.add(show4);
 		shows.add(show5);
 		shows.add(show6);
-		Map<String, UserDetails> details = new HashMap<String, UserDetails>();
-		UserDetails data1 = new UserDetails(true, 999, 12);
-		UserDetails data2 = new UserDetails(false, 0, 0);
-		UserDetails data3 = new UserDetails(true, 199, 1);
-		List<UserDetails> data = new ArrayList<UserDetails>();
+		Map<String, UserPlanDetails> details = new HashMap<String, UserPlanDetails>();
+		UserPlanDetails data1 = new UserPlanDetails(true, 999, 12);
+		UserPlanDetails data2 = new UserPlanDetails(false, 0, 0);
+		UserPlanDetails data3 = new UserPlanDetails(true, 199, 1);
+		List<UserPlanDetails> data = new ArrayList<UserPlanDetails>();
 		data.add(data1);
 		data.add(data2);
 		data.add(data3);
 		for(int i=0; i<userList.size(); i++) {
 			details.put(userList.get(i).username, data.get(i));
 		}
-		for (Map.Entry<String, UserDetails> d : details.entrySet()) {
+		for (Map.Entry<String, UserPlanDetails> d : details.entrySet()) {
 			System.out.println("Username: " + d.getKey());
 			System.out.println("Active plan: " + d.getValue().isPlanActive);
 			System.out.println("Plan cost: " + d.getValue().planCost);
