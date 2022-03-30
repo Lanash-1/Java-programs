@@ -5,6 +5,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+class ComingSoon{
+	static List<String> showsComingSoon = new ArrayList<String>();
+	static void add(String... shows) {
+		for(String show : shows) {
+			showsComingSoon.add(show);
+		}
+	}
+	static void display() {
+		System.out.println("Upcoming shows");
+		for(String shows : showsComingSoon) {
+			System.out.println(shows);
+		}
+	}
+}
+
 class Subscription{
 	int planType = 0;
 	int planCost = 0;
@@ -102,12 +117,14 @@ public class Project {
 	{
 		final String ott = "Show";
 		System.out.println("Welcome to the " + ott);
+		ComingSoon.add("arrival 1", "arrival 2", "arrival 3", "arrival 4");
 	}
 	
 	static void display() {
 		System.out.println("0.logout\n1.View Current Plan\n2.Watch movies\n3.Watch series");
 	}
 	public static void main(String[] args) {
+		ComingSoon.display();
 		Map<String, String> users = new HashMap<String, String>();
 		Map<String, UserPlanDetails> data = new HashMap<String, UserPlanDetails>();
 		Shows show1 = new Shows("movie 1", "english", 2022);
