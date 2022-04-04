@@ -1,7 +1,7 @@
 package setfour;
 import java.util.Scanner;
 
-class MoveProgram {
+public class MoveProgram {
 	static int m = 4;
 	static int[][] array = {{4,4,2,0}, {4,0,4,0}, {2,4,0,0}, {2,0,0,0}};
 	
@@ -132,6 +132,7 @@ class MoveProgram {
 	
 	 public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		
 //		moveLeft();
 //		insertAt(1,1,8);
 //		moveLeft();

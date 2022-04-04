@@ -15,7 +15,7 @@ public class SecondProgram {
 		List<String> result = new ArrayList<String>();
 		List<String> total = new ArrayList<String>();
 		for(int i=0; i<word.length()-2; i++) {
-			for(int j=i+2; j<word.length(); j++) {
+			for(int j=i+2; j<word.length()+1; j++) {
 				String temp = word.substring(i, j);
 				if(result.contains(temp)) {
 					total.add(temp);

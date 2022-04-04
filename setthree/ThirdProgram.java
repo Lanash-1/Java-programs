@@ -27,9 +27,7 @@ public class ThirdProgram {
 				index++;
 				continue;
 			}else {
-//				System.out.println("Current length = " + (currentLength-words[index].length()));
-//				System.out.println("No of words = " + (noOfWords-1));
-//				System.out.println("Gaps = " + (gaps-1));
+
 				int remainingSpace = limit - (currentLength-words[index].length());
 				int leftSpace;
 				int equalSpace;
@@ -40,9 +38,7 @@ public class ThirdProgram {
 					equalSpace = remainingSpace/(gaps-1);
 					leftSpace = remainingSpace%(gaps-1);
 				}
-//				System.out.println("remaining = " + remainingSpace);
-//				System.out.println("equal = " + equalSpace);
-//				System.out.println("left = " + leftSpace);
+
 				int count = 0;
 				currentSet = "";
 				while(count < noOfWords-1) {
@@ -67,9 +63,7 @@ public class ThirdProgram {
 				gaps = 0;
 			}
 		}
-//		System.out.println("Current length = " + currentLength);
-//		System.out.println("No of words = " + noOfWords);
-//		System.out.println("Gaps = " + gaps);
+
 		if(gaps == 0) {
 			currentSet = words[words.length-1];
 			int endSpace = limit-currentSet.length();
@@ -83,7 +77,7 @@ public class ThirdProgram {
 			int remainingSpace = limit - (currentLength);
 			for(String w : setWords) {
 				currentSet += w + " ";
-				remainingSpace++;
+				remainingSpace--;
 			}
 			for(int i=0; i<remainingSpace; i++) {
 				currentSet += " ";
