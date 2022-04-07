@@ -1,6 +1,5 @@
 package solidprinciples;
 
-
 interface UpiPayments{
 	void upi();
 }
@@ -28,7 +27,6 @@ class GooglePay implements UpiPayments{
 		System.out.println("Available");
 	}
 }
-
 
 public class LiskovSubstitutionPrinciple {
 	public static void main(String[] args) {
