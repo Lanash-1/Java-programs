@@ -13,8 +13,8 @@ class CreditCard{
 
 class Transaction{
 	DebitCard debit;
-	public Transaction(DebitCard depit) {
-		this.debit = depit;
+	public Transaction(DebitCard debit) {
+		this.debit = debit;
 	}
 	public void makeTransaction() {
 		debit.transaction();
