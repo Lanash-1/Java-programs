@@ -38,7 +38,6 @@ public class ThirdProgram {
 					equalSpace = remainingSpace/(gaps-1);
 					leftSpace = remainingSpace%(gaps-1);
 				}
-
 				int count = 0;
 				currentSet = "";
 				while(count < noOfWords-1) {
@@ -63,7 +62,6 @@ public class ThirdProgram {
 				gaps = 0;
 			}
 		}
-
 		if(gaps == 0) {
 			currentSet = words[words.length-1];
 			int endSpace = limit-currentSet.length();

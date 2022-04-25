@@ -44,9 +44,9 @@ public class SecondProgram {
 		}else {
 			System.out.println("None");
 		}
-//		System.out.println("RESULT");
-//		for(String t : total) {
-//			System.out.println(t);
-//		}
+		System.out.println("RESULT");
+		for(String t : total) {
+			System.out.println(t);
+		}
 	}
 }
