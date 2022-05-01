@@ -1,0 +1,47 @@
+7 steps to jdbc
+-------------------------------------------------------------------
+
+1. import the package (java.sql)
+
+2.a. load the driver
+(com.mysql.jdbc.driver)
+mysql-connector - should install this if not using netbeans editor.
+
+2.b. register the driver
+class.forName("com.mysql.jdbc.driver")
+
+3. establish the connection 
+need to instantiate a interface called connection
+
+4. create the statement
+i. normal statement
+ii. prepared statement
+iii. callable statement
+
+5. execute the query
+
+6. process result
+
+7. close the connection
+
+-------------------------------------------------------------------
+
+import java.sql.*; 
+
+main(){
+class.forName("com.mysql.jdbc.driver");
+
+Connection con = DriverManager.getConnection("URL", "USERNAME", "PASSWORD");
+
+Statement st = con.CreateStatement();
+
+ResultSet rs = st.executeQeury("SELECT * FROM student");
+
+while(rs.next()){
+System.out.println(rs.getInt(1) + " - " + rs.getString(2););
+}
+
+st.close();
+con.close();
+
+}
